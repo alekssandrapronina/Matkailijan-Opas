@@ -1,14 +1,14 @@
-/* Основные стили для сайта */
+/* Sivuston yleiset tyylit */
 body {
   font-family: 'Merriweather Sans', sans-serif;
-  background-color: #fff5e1; /* Очень светлый теплый жёлтый для фона */
-  color: #333; /* Основной цвет текста */
+  background-color: #fff5e1;
+  color: #333;
   line-height: 1.6;
 }
 
-/* Цвета для навигации */
+/* Navigoinnin värit */
 .navbar {
-  background-color: #f4a261; /* Тёплый насыщенный жёлтый для фона навигации */
+  background-color: #f4a261;
   width: 100%;
   padding-left: 0;
   padding-right: 0;
@@ -16,28 +16,26 @@ body {
 
 .navbar-nav {
   width: 100%;
-  justify-content: flex-end; /* Выровнять элементы меню справа */
+  justify-content: flex-end; 
 }
 
 .navbar-brand,
 .nav-link {
-  color: #373737 !important; /* Белый цвет текста в навигации */
+  color: #373737;
 }
 
 .navbar-brand:hover,
 .nav-link:hover {
-  color: #ffd966 !important; /* Бледно-жёлтый цвет при наведении */
+  color: #ffd966; 
 }
 
-/* Обновлённый стиль для хедера */
+/* Header */
 header {
-  background: linear-gradient(to right, #faa972, #e67e22); /* Градиент от тёмно-оранжевого к насыщенному жёлто-коричневому */
-  color: #fff; /* Белый текст на тёмном фоне для контраста */
+  background: linear-gradient(to right, #faa972, #e67e22); 
+  color: #fff;
   padding: 100px 0;
   text-align: center;
 }
-
-
 
 header h1 {
   font-size: 3rem;
@@ -50,38 +48,34 @@ header p {
   margin-bottom: 2rem;
 }
 
-/* Стили для кнопки в хедере */
+/* Painikkeen tyylit otsikossa */
 .header-btn {
-  background-color: #fff; /* Белый цвет по умолчанию */
-  color: #e76f51; /* Цвет текста, приближенный к цвету футера */
+  background-color: #fff; 
+  color: #e76f51; 
   padding: 15px 30px;
   font-size: 1.2rem;
   border-radius: 8px;
-  border: 2px solid #e76f51; /* Обводка для контраста */
+  border: 2px solid #e76f51;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-style: bold;
 }
 
-/* Эффект при наведении */
+/* Hover-efekti */
 .header-btn:hover {
-  background-color: #e76f51; /* Цвет фона при наведении — цвет футера */
-  color: #fff; /* Белый цвет текста при наведении */
+  background-color: #e76f51;
+  color: #fff; 
   transform: translateY(-3px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Усиление тени при наведении */
-  font-style: bold;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
-
-
-
-/* Разделы сайта */
+/* Sivuston osiot */
 .page-section {
   padding: 60px 0;
 }
 
 .bg-primary {
-  background-color: #e9c46a !important; /* Нежный жёлтый цвет для фона разделов */
+  background-color: #e9c46a; 
   color: #fff;
 }
 
@@ -99,14 +93,14 @@ header p {
   color: #fff;
 }
 
-/* Карусель */
+/* Carousel */
 .carousel-item img {
-  height: 400px; /* Задаём высоту для изображений в карусели */
+  height: 400px; 
   object-fit: cover;
 }
 
 .carousel-caption {
-  background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для текста */
+  background: rgba(0, 0, 0, 0.5);
   padding: 10px;
   border-radius: 5px;
 }
@@ -119,21 +113,20 @@ header p {
   color: #ddd;
 }
 
-/* Секция с погодой и временем */
+/* Sääennuste-osio */
 #weather-section {
-  background-color: #fff5e1; /* Светлый фон для погодного раздела */
+  background-color: #fff5e1; 
 }
 
 #weather-section h4 {
-  color: #e76f51; /* Яркий оранжевый для заголовков */
+  color: #e76f51; 
 }
 
 #weather-section p {
-  color: #666; /* Более тёмный текст для информации */
+  color: #666; 
 }
 
-
-/* Форма обратной связи */
+/* Lomakkeen kentät */
 .form-control {
   border: 1px solid #ffd966;
   padding: 1rem;
@@ -146,7 +139,7 @@ header p {
   box-shadow: none;
 }
 
-/* Кнопка отправки формы */
+/* Lomakkeen painike */
 .btn-primary {
   background-color: #f4a261;
   border-color: #f4a261;
@@ -157,7 +150,7 @@ header p {
   border-color: #e76f51;
 }
 
-/* Подвал сайта */
+/* Sivuston footer */
 footer {
   background-color: #e76f51;
   color: #fff;
@@ -176,7 +169,7 @@ footer a:hover {
   color: #fff;
 }
 
-/* Дополнительные стили */
+/* Lisätyylit */
 hr.divider {
   border-top: 2px solid #ffd966;
   width: 60px;
@@ -184,7 +177,7 @@ hr.divider {
 }
 
 .card {
-  background-color: #fbf7ed; /* Светлый теплый фон */
+  background-color: #fbf7ed;
   border: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -211,6 +204,7 @@ hr.divider {
 img {
   margin-top: 10px;
 }
+/* Sovellukset-osio */
 
 #travel-apps {
     background-color: #f4f4f9;
@@ -246,104 +240,42 @@ img {
     margin-bottom: 10px;
 }
 
-#about-site {
-  background-color: #fff5e1; /* Светло-жёлтый фон секции */
-  padding: 60px 0;
-}
-
-#about-site .card {
-  background-color: #fff5e1; /* Цвет карточки */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
-  border: none; /* Убираем границы */
-  border-radius: 12px; /* Закругляем углы */
-}
-
-#about-site h2 {
-  color: #e76f51; /* Цвет заголовков */
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-#about-site h4 {
-  color: #f4a261; /* Цвет заголовков */
-  margin-bottom: 1rem;
-  text-align: left; /* Выравниваем заголовок по левому краю */
-}
-
-#about-site ul {
-  list-style-type: disc; /* Обычные маркеры */
-  margin-left: 0; /* Убираем отступ слева */
-  padding-left: 20px; /* Добавляем внутренний отступ для маркеров */
-}
-
-#about-site li {
-  margin-bottom: 10px;
-  font-size: 1.1rem;
-  color: #333;
-}
-
-#about-site p {
-  font-size: 1.2rem;
-  color: #666;
-  text-align: center;
-}
-
-#about-site .col-md-6 {
-  text-align: left; /* Выравниваем содержимое по левому краю */
-}
-
-#about-site .row {
-  display: flex;
-  justify-content: space-between; /* Пространство между колонками */
-}
-
-
-
-
-
-
-
-
-
-/* Добавляем отступ сверху для блока FAQ */
+/* FAQ-osio: lisäätään marginaalia */
 #faq-section {
-  background-color: #ffffff; /* Светло-жёлтый фон */
+  background-color: #ffffff;
   color: #333;
   padding: 60px 0;
-  margin-top: 60px; /* Отступ сверху */
+  margin-top: 60px; 
 }
 
-/* Можно также увеличить отступ у формы снизу, чтобы увеличить расстояние */
+/* Lomakkeen alaosa */
 form {
-  margin-bottom: 60px; /* Увеличенный отступ снизу у формы */
+  margin-bottom: 60px;
 }
 
-
-/* Стили для кнопок аккордеона */
+/* Tyylit FAQ-osion painikkeille */
 .accordion-button {
-  background-color: #fff5e1; /* Цвет в стиле сайта, светло-жёлтый */
-  color: #333; /* Темный текст */
+  background-color: #fff5e1;
+  color: #333;
   font-weight: bold;
   border: none;
 }
 
 .accordion-button:focus {
-  box-shadow: none; /* Убираем стандартное выделение при фокусе */
+  box-shadow: none;
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: #f4a261; /* Цвет при открытии аккордеона */
-  color: #fff; /* Белый текст при открытии */
+  background-color: #f4a261;
+  color: #fff;
 }
 
 .accordion-button:hover {
-  background-color: #f4a261; /* Цвет при наведении */
-  color: #fff; /* Белый текст при наведении */
+  background-color: #f4a261;
+  color: #fff;
 }
 
 .accordion-body {
-  background-color: #fff5e1; /* Светло-жёлтый фон */
-  color: #333; /* Темный текст */
+  background-color: #fff5e1;
+  color: #333;
 }
-
