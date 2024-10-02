@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Matkailijan Opas</title>
+
+  <!-- Bootstrap-tyylien lisääminen -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- CSS-tiedosto -->
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigaatio -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Matkailijan Opas</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#suosittumat-kohteet">Suosituimmat kohteet</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#saa-paikallinen-aika">Sääennuste</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#travel-apps">Sovellukset</a> <!-- Новый элемент меню -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#form-section">Tilaa tiedot</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#faq-section">Vastauksia kysymyksiin</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+  <!-- Header -->
+  <header class="text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-4">Tutki maailmaa kanssamme!</h1>
+      <p class="lead">Löydä parhaat matkakohteet ja saa vinkkejä kokeneilta matkaajilta.</p>
+      <!-- Painike, joka vie tilaustietolomakkeeseen -->
+      <a href="#form-section" class="btn header-btn">TILAA TIEDOT</a>
+    </div>
+  </header>
+
+  <!-- Matkakohdat -->
+  <section id="suosittumat-kohteet" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Suosituimmat matkakohteet</h2>
+      <div id="touristCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#touristCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#touristCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#touristCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <!-- Ensimmäinen dia -->
+          <div class="carousel-item active">
+            <img src="assets/Paris1.jpg" class="d-block w-100" alt="Paris">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Pariisi, Ranska</h5>
+              <p>Tutustu taiteeseen, kulttuuriin ja romantiikkaan Euroopan sydämessä.</p>
+            </div>
+          </div>
+          <!-- Toinen dia -->
+          <div class="carousel-item">
+            <img src="assets/Tokyo.jpg" class="d-block w-100" alt="Tokyo">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Tokio, Japani</h5>
+              <p>Modernia arkkitehtuuria, herkullista ruokaa ja Japanin ikiaikaisia perinteitä.</p>
+            </div>
+          </div>
+          <!-- Kolmas dia -->
+          <div class="carousel-item">
+            <img src="assets/NY.jpg" class="d-block w-100" alt="New York">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>New York, Yhdysvallat</h5>
+              <p>Kaupunki, joka ei koskaan nuku, pilvenpiirtäjineen ja kulttuureineen.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#touristCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Edellinen</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#touristCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Seuraava</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sääennuste matkakohteille -->
+  <section id="saa-paikallinen-aika" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Sääennuste</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Pariisi, Ranska</h4>
+                        <p class="card-text">
+                            <strong>Lämpötila:</strong> <span id="weather-paris-temp">--</span> °C
+                        </p>
+                        <p class="card-text">
+                            <strong>Kuvaus:</strong> <span id="weather-paris-description">--</span>
+                        </p>
+                        <p class="card-text">
+                            <strong>Tuulen nopeus:</strong> <span id="weather-paris-wind">--</span> m/s
+                        </p>
+                        <img id="weather-paris-icon" src="" alt="kuvake" style="width: 50px;">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Tokio, Japani</h4>
+                        <p class="card-text">
+                            <strong>Lämpötila:</strong> <span id="weather-tokyo-temp">--</span> °C
+                        </p>
+                        <p class="card-text">
+                            <strong>Kuvaus:</strong> <span id="weather-tokyo-description">--</span>
+                        </p>
+                        <p class="card-text">
+                            <strong>Tuulen nopeus:</strong> <span id="weather-tokyo-wind">--</span> m/s
+                        </p>
+                        <img id="weather-tokyo-icon" src="" alt="kuvake" style="width: 50px;">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">New York, Yhdysvallat</h4>
+                        <p class="card-text">
+                            <strong>Lämpötila:</strong> <span id="weather-newyork-temp">--</span> °C
+                        </p>
+                        <p class="card-text">
+                            <strong>Kuvaus:</strong> <span id="weather-newyork-description">--</span>
+                        </p>
+                        <p class="card-text">
+                            <strong>Tuulen nopeus:</strong> <span id="weather-newyork-wind">--</span> m/s
+                        </p>
+                        <img id="weather-newyork-icon" src="" alt="kuvake" style="width: 50px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Parhaat sovellukset-->
+<section id="travel-apps" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Parhaat matkailusovellukset</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body text-center">
+                        <img src="assets/google-maps.png" alt="Google Maps" style="width: 50px;">
+                        <h5 class="card-title mt-3">Google Maps</h5>
+                        <p class="card-text">Suosituin sovellus reittien löytämiseen ja navigointiin ympäri maailmaa.</p>
+                        <a href="https://www.google.com/maps" class="btn btn-primary">Lataa</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body text-center">
+                        <img src="assets/tripadvisor.png" alt="TripAdvisor" style="width: 50px;">
+                        <h5 class="card-title mt-3">TripAdvisor</h5>
+                        <p class="card-text">Tutustu matkailijoiden arvioihin ravintoloista, hotelleista ja nähtävyyksistä.</p>
+                        <a href="https://www.tripadvisor.com" class="btn btn-primary">Lataa</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body text-center">
+                        <img src="assets/airbnb.png" alt="Airbnb" style="width: 50px;">
+                        <h5 class="card-title mt-3">Airbnb</h5>
+                        <p class="card-text">Löydä ainutlaatuisia majoitusvaihtoehtoja maailmanlaajuisesti ja tee varauksia helposti.</p>
+                        <a href="https://www.airbnb.com" class="btn btn-primary">Lataa</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body text-center">
+                        <img src="assets/skyscanner icone.png" alt="Skyscanner" style="width: 50px;">
+                        <h5 class="card-title mt-3">Skyscanner</h5>
+                        <p class="card-text">Vertaa lentoja, hotelleja ja autonvuokrauksia löytääksesi parhaat tarjoukset.</p>
+                        <a href="https://www.skyscanner.net" class="btn btn-primary">Lataa</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body text-center">
+                        <img src="assets/rome2rio icon.png" alt="Rome2Rio" style="width: 50px;">
+                        <h5 class="card-title mt-3">Rome2Rio</h5>
+                        <p class="card-text">Suunnittele matkasi käyttäen eri liikennemuotoja, kuten junia, busseja ja lentoja.</p>
+                        <a href="https://www.rome2rio.com" class="btn btn-primary">Lataa</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body text-center">
+                        <img src="assets/pack point icone.png" alt="PackPoint" style="width: 50px;">
+                        <h5 class="card-title mt-3">PackPoint</h5>
+                        <p class="card-text">Helppo tapa luoda pakkauslista matkallesi ottaen huomioon sääolosuhteet ja aktiviteetit.</p>
+                        <a href="https://www.packpnt.com" class="btn btn-primary">Lataa</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Lomake tilaustietoja varten -->
+<section id="form-section" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Haluatko lisää tietoa matkakohteista?</h2>
+      <p class="text-center mb-4">Täytä lomake, niin lähetämme sinulle ajankohtaista tietoa ja tarjouksia suosituimmista matkakohteista.</p>
+
+      <!-- Lomake -->
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Nimesi</label>
+              <input type="text" class="form-control" id="name" placeholder="Syötä nimesi">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Sähköpostiosoitteesi</label>
+              <input type="email" class="form-control" id="email" placeholder="Syötä sähköpostiosoitteesi">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Tilaa tiedot</button>
+          </form>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq-section" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Vastauksia kysymyksiin</h2>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Kuinka tarkistan sääennusteen?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Voit tarkistaa sääennusteen valitsemalla kohteesi pääsivulta. Sääennuste päivitetään reaaliajassa.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Miten löydän suosituimmat matkakohteet?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Sivustolla on lista suosituimmista matkakohteista, jotka löydät osiosta "Suosituimmat matkakohteet". Klikkaamalla voit tutustua kohteisiin.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Miten saan tietoa matkailusovelluksista?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Parhaat matkailusovellukset löydät sivuston osiosta "Parhaat matkailusovellukset". Siellä on lyhyt kuvaus ja linkit sovellusten lataamiseen.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-light py-5">
+    <div class="container text-center">
+      <p class="small">Digitekniikat - DIG007AS2A-3012. Matkailijan Opas. Tekijä: Aleksandra Pronina.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap ja Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JavaScript-tiedosto -->
+<script src="js/weather-time.js"></script>
+</body>
+</html>
+
