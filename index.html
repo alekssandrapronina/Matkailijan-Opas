@@ -53,42 +53,44 @@
     </div>
   </header>
 
-  <!-- Matkakohdat -->
-  <section id="suosittumat-kohteet" class="py-5">
+<!-- Suosituimmat kohteet -osio -->
+<section id="suosittumat-kohteet" class="py-5">
     <div class="container">
       <h2 class="text-center mb-4">Suosituimmat matkakohteet</h2>
       <div id="touristCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#touristCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#touristCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#touristCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <!-- liukukuvat -->
+          <button type="button" data-bs-target="#touristCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Pariisi"></button>
+          <button type="button" data-bs-target="#touristCarousel" data-bs-slide-to="1" aria-label="Tokio"></button>
+          <button type="button" data-bs-target="#touristCarousel" data-bs-slide-to="2" aria-label="New York"></button>
         </div>
         <div class="carousel-inner">
-          <!-- 1 dia -->
+          <!-- Ensimmäinen liukukuva (Pariisi) -->
           <div class="carousel-item active">
-            <img src="assets/Paris1.jpg" class="d-block w-100" alt="Paris">
-            <div class="carousel-caption">
+            <img src="assets/Paris1.jpg" class="d-block w-100" alt="Pariisi" data-bs-toggle="modal" data-bs-target="#parisModal" style="cursor: pointer;">
+            <div class="carousel-caption d-none d-md-block">
               <h5>Pariisi, Ranska</h5>
               <p>Tutustu taiteeseen, kulttuuriin ja romantiikkaan Euroopan sydämessä.</p>
             </div>
           </div>
-          <!-- 2 dia -->
+          <!-- Toinen liukukuva (Tokio) -->
           <div class="carousel-item">
-            <img src="assets/Tokyo.jpg" class="d-block w-100" alt="Tokyo">
-            <div class="carousel-caption">
+            <img src="assets/Tokyo.jpg" class="d-block w-100" alt="Tokio" data-bs-toggle="modal" data-bs-target="#tokyoModal" style="cursor: pointer;">
+            <div class="carousel-caption d-none d-md-block">
               <h5>Tokio, Japani</h5>
-              <p>Modernia arkkitehtuuria, herkullista ruokaa ja Japanin ikiaikaisia perinteitä.</p>
+              <p>Modernia arkkitehtuuria, herkullista ruokaa ja ikiaikaisia perinteitä.</p>
             </div>
           </div>
-          <!-- 3 dia -->
+          <!-- Kolmas liukukuva (New York) -->
           <div class="carousel-item">
-            <img src="assets/NY.jpg" class="d-block w-100" alt="New York">
-            <div class="carousel-caption">
+            <img src="assets/NY.jpg" class="d-block w-100" alt="New York" data-bs-toggle="modal" data-bs-target="#newYorkModal" style="cursor: pointer;">
+            <div class="carousel-caption d-none d-md-block">
               <h5>New York, Yhdysvallat</h5>
               <p>Kaupunki, joka ei koskaan nuku, pilvenpiirtäjineen ja kulttuureineen.</p>
             </div>
           </div>
         </div>
+        <!-- Liukukuvan hallintapainikkeet -->
         <button class="carousel-control-prev" type="button" data-bs-target="#touristCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Edellinen</span>
@@ -100,6 +102,84 @@
       </div>
     </div>
   </section>
+
+ <!-- Pariisi - modaalinen ikkuna -->
+<div class="modal fade" id="parisModal" tabindex="-1" aria-labelledby="parisModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="parisModalLabel">Pariisi, Ranska</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulje"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <!-- Vasen puoli (kuva) -->
+            <div class="col-md-6">
+              <img src="assets/Paris1.jpg" alt="Pariisi" class="img-fluid">
+            </div>
+            <!-- Oikea puoli (teksti) -->
+            <div class="col-md-6">
+                <p>Pariisi on Ranskan pääkaupunki ja yksi maailman suosituimmista matkailukohteista. Kaupunki tunnetaan Eiffel-tornistaan, Louverista ja Notre-Damesta, mutta se tarjoaa myös upeita museoita, katukahviloita ja taidegallerioita. Historialliset monumentit ja kulttuuriperintö houkuttelevat miljoonia matkailijoita vuosittain.</p>
+                <p>Pariisi on myös muodin ja gastronomian keskus. Täältä löydät maailmanluokan ostosmahdollisuudet Champs-Élysées-kadulla ja upeita ravintoloita, joissa voit nauttia perinteisistä ranskalaisista ruoista. Kävele Seinen rannoilla ja nauti kaupungin romanttisesta ilmapiiristä.</p>
+                <p>Kulttuurielämä Pariisissa on vilkas: monet teatterit, oopperat ja baletti tarjoavat esityksiä ympäri vuoden. Kaupunki on myös kuuluisa sen kirjallisuudesta, filosofeista ja taiteilijoista, jotka ovat jättäneet jälkensä kaupungin historiaan.</p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Tokio - modaalinen ikkuna -->
+  <div class="modal fade" id="tokyoModal" tabindex="-1" aria-labelledby="tokyoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="tokyoModalLabel">Tokio, Japani</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulje"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <!-- Vasen puoli (kuva) -->
+            <div class="col-md-6">
+              <img src="assets/Tokyo.jpg" alt="Tokio" class="img-fluid">
+            </div>
+            <!-- Oikea puoli (teksti) -->
+            <div class="col-md-6">
+                <p>Tokio on Japanin pääkaupunki ja yksi maailman suurimmista metropoleista. Se on yhdistelmä ultramodernia teknologiaa ja ikivanhoja perinteitä. Kaupunki tarjoaa matkailijoille nähtävyyksiä, kuten keisarillisen palatsin, Sensō-ji-temppelin ja kuuluisan Shibuya-risteyksen, joka on yksi vilkkaimmista maailmassa.</p>
+                <p>Tokio on myös maailmanlaajuisesti tunnettu sen ruokakulttuurista, erityisesti sushi-ravintoloista ja ramen-kioskien tarjonnasta. Kaupunki on gastronomian paratiisi, ja siellä on enemmän Michelin-tähtiä kuin missään muualla maailmassa.</p>
+                <p>Shoppailu Tokiossa on vertaansa vailla, ja kaupungista löytyy kaikkea luksusbrändeistä pieniin perinteisiin markkinoihin. Tokiossa voit kokea myös japanilaista popkulttuuria, kuten animea, mangaa ja Kawaii-muotoilua.</p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- New York - modaalinen ikkuna -->
+  <div class="modal fade" id="newYorkModal" tabindex="-1" aria-labelledby="newYorkModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="newYorkModalLabel">New York, Yhdysvallat</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulje"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <!-- Vasen puoli (kuva) -->
+            <div class="col-md-6">
+              <img src="assets/NY.jpg" alt="New York" class="img-fluid">
+            </div>
+            <!-- Oikea puoli (teksti) -->
+            <div class="col-md-6">
+                <p>New York on Yhdysvaltojen suurin kaupunki ja kansainvälinen talous- ja kulttuurikeskus. Kaupungin maamerkkeihin kuuluvat Vapaudenpatsas, Empire State Building ja Central Park. New York tunnetaan myös Times Squaresta ja Broadway-teattereistaan.</p>
+                <p>Kaupunki on sulatusuuni eri kulttuureille, ja se näkyy sen monipuolisessa ruokakulttuurissa. Matkailijat voivat kokeilla kaikkea kansainvälisestä keittiöstä perinteisiin amerikkalaisiin ruokiin. Kaupunki on myös maailman taidekeskus, jossa sijaitsee tunnettuja museoita, kuten Metropolitan Museum of Art ja Museum of Modern Art (MoMA).</p>
+                <p>New York on kaupunki, joka ei koskaan nuku, ja sen vilkas elämä tarjoaa loputtomasti tekemistä päivin ja öin. Yöelämä, kattobaarit ja jazz-klubit tekevät kaupungista unohtumattoman kokemuksen.</p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Sääennuste matkakohteille -->
   <section id="saa-paikallinen-aika" class="py-5 bg-light">
