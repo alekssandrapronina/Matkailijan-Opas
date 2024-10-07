@@ -46,8 +46,8 @@
   <!-- Header -->
   <header class="text-white text-center py-5">
     <div class="container">
-      <h1 class="display-4">Tutki maailmaa kanssamme!</h1>
-      <p class="lead">Löydä parhaat matkakohteet ja saa vinkkejä kokeneilta matkaajilta.</p>
+      <h1 class="display-4">Tutki maailmaa kanssamme!</h1> <!-- H1-pääotsikko -->
+      <p class="lead">Tutustu suosituimpiin matkakohteisiin, katso reaaliaikaiset sääennusteet ja löydä parhaat matkailusovellukset.<br>Inspiroidu ja valmistaudu seuraavaan seikkailuusi!</p>
       <!-- Painike, joka vie tilaustietolomakkeeseen -->
       <a href="#form-section" class="btn header-btn">TILAA TIEDOT</a>
     </div>
@@ -56,7 +56,7 @@
 <!-- Suosituimmat kohteet -osio -->
 <section id="suosittumat-kohteet" class="py-5">
     <div class="container">
-      <h2 class="text-center mb-4">Suosituimmat matkakohteet</h2>
+      <h2 class="text-center mb-4">Suosituimmat matkakohteet</h2> <!-- H2-otsikko -->
       <div id="touristCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <!-- liukukuvat -->
@@ -69,7 +69,7 @@
           <div class="carousel-item active">
             <img src="assets/Paris1.jpg" class="d-block w-100" alt="Pariisi" data-bs-toggle="modal" data-bs-target="#parisModal" style="cursor: pointer;">
             <div class="carousel-caption d-block">
-              <h5>Pariisi, Ranska</h5>
+              <h3>Pariisi, Ranska</h3> <!-- H3-otsikko kaupungeille -->
               <p>Tutustu taiteeseen, kulttuuriin ja romantiikkaan Euroopan sydämessä.</p>
             </div>
           </div>
@@ -77,7 +77,7 @@
           <div class="carousel-item">
             <img src="assets/tokyo 1.jpg" class="d-block w-100" alt="Tokio" data-bs-toggle="modal" data-bs-target="#tokyoModal" style="cursor: pointer;">
             <div class="carousel-caption d-block">
-              <h5>Tokio, Japani</h5>
+              <h3>Tokio, Japani</h3> <!-- H3-otsikko -->
               <p>Modernia arkkitehtuuria, herkullista ruokaa ja ikiaikaisia perinteitä.</p>
             </div>
           </div>
@@ -85,7 +85,7 @@
           <div class="carousel-item">
             <img src="assets/NY.jpg" class="d-block w-100" alt="New York" data-bs-toggle="modal" data-bs-target="#newYorkModal" style="cursor: pointer;">
             <div class="carousel-caption d-block">
-              <h5>New York, Yhdysvallat</h5>
+              <h3>New York, Yhdysvallat</h3> <!-- H3-otsikko -->
               <p>Kaupunki, joka ei koskaan nuku, pilvenpiirtäjineen ja kulttuureineen.</p>
             </div>
           </div>
@@ -108,7 +108,7 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="parisModalLabel">Pariisi, Ranska</h5>
+          <h3 class="modal-title" id="parisModalLabel">Pariisi, Ranska</h3> <!-- H3-otsikko modaalissa -->
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulje"></button>
         </div>
         <div class="modal-body">
@@ -134,7 +134,7 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="tokyoModalLabel">Tokio, Japani</h5>
+          <h3 class="modal-title" id="tokyoModalLabel">Tokio, Japani</h3> <!-- H3-otsikko modaalissa -->
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulje"></button>
         </div>
         <div class="modal-body">
@@ -160,7 +160,7 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="newYorkModalLabel">New York, Yhdysvallat</h5>
+          <h3 class="modal-title" id="newYorkModalLabel">New York, Yhdysvallat</h3> <!-- H3-otsikko modaalissa -->
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulje"></button>
         </div>
         <div class="modal-body">
@@ -184,12 +184,12 @@
   <!-- Sääennuste matkakohteille -->
   <section id="saa-paikallinen-aika" class="py-5 bg-light">
     <div class="container">
-        <h2 class="text-center mb-4">Sääennuste</h2>
+        <h2 class="text-center mb-4">Sääennuste</h2> <!-- H2-otsikko -->
         <div class="row">
             <div class="col-md-4">
                 <div class="card shadow-sm mb-4">
                     <div class="card-body text-center">
-                        <h4 class="card-title">Pariisi, Ranska</h4>
+                        <h3 class="card-title">Pariisi, Ranska</h3> <!-- H3 kaupunkien nimille -->
                         <p class="card-text">
                             <strong>Lämpötila:</strong> <span id="weather-paris-temp">--</span> °C
                         </p>
@@ -206,7 +206,7 @@
             <div class="col-md-4">
                 <div class="card shadow-sm mb-4">
                     <div class="card-body text-center">
-                        <h4 class="card-title">Tokio, Japani</h4>
+                        <h3 class="card-title">Tokio, Japani</h3> <!-- H3 -->
                         <p class="card-text">
                             <strong>Lämpötila:</strong> <span id="weather-tokyo-temp">--</span> °C
                         </p>
@@ -223,7 +223,7 @@
             <div class="col-md-4">
                 <div class="card shadow-sm mb-4">
                     <div class="card-body text-center">
-                        <h4 class="card-title">New York, Yhdysvallat</h4>
+                        <h3 class="card-title">New York, Yhdysvallat</h3> <!-- H3 -->
                         <p class="card-text">
                             <strong>Lämpötila:</strong> <span id="weather-newyork-temp">--</span> °C
                         </p>
@@ -240,16 +240,17 @@
         </div>
     </div>
 </section>
+
 <!-- Parhaat sovellukset-->
 <section id="travel-apps" class="py-5 bg-light">
     <div class="container">
-        <h2 class="text-center mb-4">Parhaat matkailusovellukset</h2>
+        <h2 class="text-center mb-4">Parhaat matkailusovellukset</h2> <!-- H2-otsikko -->
         <div class="row">
             <div class="col-md-4">
                 <div class="card shadow-sm mb-4">
                     <div class="card-body text-center">
                         <img src="assets/google-maps.png" alt="Google Maps" style="width: 50px;">
-                        <h5 class="card-title mt-3">Google Maps</h5>
+                        <h3 class="card-title mt-3">Google Maps</h3> <!-- H3 sovellusten nimille -->
                         <p class="card-text">Suosituin sovellus reittien löytämiseen ja navigointiin ympäri maailmaa.</p>
                         <a href="https://www.google.com/maps" class="btn btn-primary">Lataa</a>
                     </div>
@@ -259,7 +260,7 @@
                 <div class="card shadow-sm mb-4">
                     <div class="card-body text-center">
                         <img src="assets/tripadvisor.png" alt="TripAdvisor" style="width: 50px;">
-                        <h5 class="card-title mt-3">TripAdvisor</h5>
+                        <h3 class="card-title mt-3">TripAdvisor</h3> <!-- H3 -->
                         <p class="card-text">Tutustu matkailijoiden arvioihin ravintoloista, hotelleista ja nähtävyyksistä.</p>
                         <a href="https://www.tripadvisor.com" class="btn btn-primary">Lataa</a>
                     </div>
@@ -269,7 +270,7 @@
                 <div class="card shadow-sm mb-4">
                     <div class="card-body text-center">
                         <img src="assets/airbnb.png" alt="Airbnb" style="width: 50px;">
-                        <h5 class="card-title mt-3">Airbnb</h5>
+                        <h3 class="card-title mt-3">Airbnb</h3> <!-- H3 -->
                         <p class="card-text">Löydä ainutlaatuisia majoitusvaihtoehtoja maailmanlaajuisesti ja tee varauksia helposti.</p>
                         <a href="https://www.airbnb.com" class="btn btn-primary">Lataa</a>
                     </div>
@@ -281,7 +282,7 @@
                 <div class="card shadow-sm mb-4">
                     <div class="card-body text-center">
                         <img src="assets/skyscanner icone.png" alt="Skyscanner" style="width: 50px;">
-                        <h5 class="card-title mt-3">Skyscanner</h5>
+                        <h3 class="card-title mt-3">Skyscanner</h3> <!-- H3 -->
                         <p class="card-text">Vertaa lentoja, hotelleja ja autonvuokrauksia löytääksesi parhaat tarjoukset.</p>
                         <a href="https://www.skyscanner.net" class="btn btn-primary">Lataa</a>
                     </div>
@@ -291,7 +292,7 @@
                 <div class="card shadow-sm mb-4">
                     <div class="card-body text-center">
                         <img src="assets/rome2rio icon.png" alt="Rome2Rio" style="width: 50px;">
-                        <h5 class="card-title mt-3">Rome2Rio</h5>
+                        <h3 class="card-title mt-3">Rome2Rio</h3> <!-- H3 -->
                         <p class="card-text">Suunnittele matkasi käyttäen eri liikennemuotoja, kuten junia, busseja ja lentoja.</p>
                         <a href="https://www.rome2rio.com" class="btn btn-primary">Lataa</a>
                     </div>
@@ -301,7 +302,7 @@
                 <div class="card shadow-sm mb-4">
                     <div class="card-body text-center">
                         <img src="assets/pack point icone.png" alt="PackPoint" style="width: 50px;">
-                        <h5 class="card-title mt-3">PackPoint</h5>
+                        <h3 class="card-title mt-3">PackPoint</h3> <!-- H3 -->
                         <p class="card-text">Helppo tapa luoda pakkauslista matkallesi ottaen huomioon sääolosuhteet ja aktiviteetit.</p>
                         <a href="https://www.packpnt.com" class="btn btn-primary">Lataa</a>
                     </div>
@@ -310,10 +311,11 @@
         </div>
     </div>
 </section>
+
 <!-- Lomake tilaustietoja varten -->
 <section id="form-section" class="py-5">
     <div class="container">
-      <h2 class="text-center mb-4">Haluatko lisää tietoa matkakohteista?</h2>
+      <h2 class="text-center mb-4">Haluatko lisää tietoa matkakohteista?</h2> <!-- H2-otsikko -->
       <p class="text-center mb-4">Täytä lomake, niin lähetämme sinulle ajankohtaista tietoa ja tarjouksia suosituimmista matkakohteista.</p>
 
       <!-- Lomake -->
@@ -338,14 +340,14 @@
 <!-- FAQ -->
 <section id="faq-section" class="py-5">
     <div class="container">
-        <h2 class="text-center mb-4">Vastauksia kysymyksiin</h2>
+        <h2 class="text-center mb-4">Vastauksia kysymyksiin</h2> <!-- H2-otsikko -->
         <div class="accordion" id="faqAccordion">
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
+                <h3 class="accordion-header" id="headingOne"> <!-- H3 FAQ-kysymyksille -->
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Kuinka tarkistan sääennusteen?
                     </button>
-                </h2>
+                </h3>
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
                         Voit tarkistaa sääennusteen valitsemalla kohteesi pääsivulta. Sääennuste päivitetään reaaliajassa.
@@ -353,11 +355,11 @@
                 </div>
             </div>
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
+                <h3 class="accordion-header" id="headingTwo"> <!-- H3 -->
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                         Miten löydän suosituimmat matkakohteet?
                     </button>
-                </h2>
+                </h3>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
                         Sivustolla on lista suosituimmista matkakohteista, jotka löydät osiosta "Suosituimmat matkakohteet". Klikkaamalla voit tutustua kohteisiin.
@@ -365,11 +367,11 @@
                 </div>
             </div>
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
+                <h3 class="accordion-header" id="headingThree"> <!-- H3 -->
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         Miten saan tietoa matkailusovelluksista?
                     </button>
-                </h2>
+                </h3>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
                         Parhaat matkailusovellukset löydät sivuston osiosta "Parhaat matkailusovellukset". Siellä on lyhyt kuvaus ja linkit sovellusten lataamiseen.
@@ -395,4 +397,3 @@
 <script src="js/weather-time.js"></script>
 </body>
 </html>
-
